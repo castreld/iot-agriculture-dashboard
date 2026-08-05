@@ -1,0 +1,13 @@
+tunnel: ffb94b21-1dfe-4301-b11c-385ab2cad1f2
+credentials-file: C:\Users\Lenovo\.cloudflared\ffb94b21-1dfe-4301-b11c-385ab2cad1f2.json
+
+ingress:
+  - hostname: pelatihan.firaasdev.my.id
+    service: http://localhost:3000
+    originRequest:
+      httpHostHeader: localhost:3000
+  - hostname: pelatihan-api.firaasdev.my.id
+    service: http://localhost:3001
+    originRequest:
+      httpHostHeader: localhost:3001
+  - service: http_status:404
